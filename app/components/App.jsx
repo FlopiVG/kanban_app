@@ -51,6 +51,6 @@ export default class App extends React.Component {
             return;
         }
 
-        NoteActions.update({id: task});
+        NoteActions.update({task: task, id: id});
     }
 }
