@@ -1,7 +1,6 @@
 import uuid from 'node-uuid';
 import alt from '../libs/alt';
 import LaneActions from '../actions/LaneActions';
-import NoteStore from '../stores/NoteStore';
 
 class LaneStore {
     constructor(){
@@ -43,8 +42,6 @@ class LaneStore {
             this.waitFor(NoteStore);
             noteId = NoteStore.getState().notes.slice(-1)[0].id;
         }*/
-        console.log("LaneId -> " + laneId);
-        console.log("NoteId -> " + noteId);
         const lanes = this.lanes.map(lane => {
             if(lane.id === laneId){
                 if(lane.notes.includes(noteId)){
