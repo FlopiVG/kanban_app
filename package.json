@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "stats": "webpack --profile --json > stats.json",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,12 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-survivejs-kanban": "^0.3.3",
+    "clean-webpack-plugin": "^0.1.14",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.12.0",
+    "html-webpack-plugin": "^2.24.1",
+    "html-webpack-template": "^6.0.0",
     "npm-install-webpack-plugin": "^4.0.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
